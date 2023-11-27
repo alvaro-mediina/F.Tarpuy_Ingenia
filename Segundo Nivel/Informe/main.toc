@@ -1,0 +1,8 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Objetivo}{2}{}%
+\contentsline {section}{\numberline {2}Marco Teórico}{3}{}%
+\contentsline {section}{\numberline {3}Implementación}{3}{}%
+\contentsline {section}{\numberline {4}Resultados}{3}{}%
+\contentsline {section}{\numberline {5}Conclusión}{3}{}%
+\contentsline {section}{\numberline {6}Bibliografía}{3}{}%

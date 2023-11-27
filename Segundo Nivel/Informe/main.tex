@@ -1,0 +1,93 @@
+%--Preámbulo--%
+\documentclass[12pt, letterpaper, oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{vmargin}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{lipsum}
+\usepackage{geometry}
+
+%--Configuración de la página--%
+\setpapersize{A4}
+\setmargins{2cm}			%Márgen izquierdo
+		   {2cm}			%Márgen superior
+		   {16.5cm}			%Ancho del área de impresión
+		   {23.42cm}			%Longitud del área de impresión
+		   {14pt}				%Encabezado
+		   {5mm}				%Espacio entre el encabezado y el documento
+		   {2pt}				%Pié de página
+		   {5mm}				%Espacio entre el pié de página y el documento 
+
+%--Encabezado y Pié de Página--%
+\pagestyle{fancy}
+\lhead{Trabajo Práctico Final}
+\rhead{Segundo Nivel}
+
+\renewcommand{\footrulewidth}{0.08pt}
+
+%--Dirección de las imágenes--%
+\graphicspath{{./img/}}
+
+\titleformat{\section}[block]
+  {\normalfont\Large\bfseries\filcenter}
+  {}
+  {0pt}
+  {}
+  
+%--Document--%
+\begin{document}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+	\begin{titlepage}
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+	\center % Center everything on the page
+	\vspace*{4cm}
+	\textsc{\Huge Fundación Tarpuy }\\[0.3cm]
+	\textsc{\Large Segundo Nivel Ingenia}\\[0.2cm]
+	\textsc{Segundo semestre 2023}\\[0.3cm]
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[height=3.5cm]{2}
+	\end{figure}
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+	\HRule \\[0.8cm]
+	{ \huge \bfseries Redes Neuronales}\\[0.4cm] % Title of your document
+	{ \large \bfseries Aplicada a la detección de señales de tránsito}\\[0.2cm]
+	\HRule \\[1.0cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+	\begin{minipage}{0.8\textwidth}
+		\begin{center} \large
+			Tutor: Leandro Borgnino \\[0.5cm]
+			Integrantes: Medina Santiago y Esteban Suarez
+		\end{center}
+	\end{minipage}
+
+	\vspace{1cm}
+	\end{titlepage}
+
+	\tableofcontents
+	\pagebreak
+
+%----------------------------------------------------------------------------------------
+%	TP SECTION
+%----------------------------------------------------------------------------------------
+	\include{tp}
+
+
+\end{document}
