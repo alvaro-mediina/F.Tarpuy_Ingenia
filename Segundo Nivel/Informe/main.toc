@@ -3,7 +3,11 @@
 \contentsline {subsection}{\numberline {1.1}Motivación}{2}{}%
 \contentsline {subsection}{\numberline {1.2}Objetivo}{2}{}%
 \contentsline {section}{\numberline {2}Marco Teórico}{3}{}%
-\contentsline {section}{\numberline {3}Implementación}{3}{}%
-\contentsline {section}{\numberline {4}Resultados}{3}{}%
-\contentsline {section}{\numberline {5}Conclusión}{3}{}%
-\contentsline {section}{\numberline {6}Bibliografía}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Detección de Objetos}{3}{}%
+\contentsline {subsection}{\numberline {2.2}Clasificación de la imágen}{3}{}%
+\contentsline {subsection}{\numberline {2.3}Clasificación con Localización}{4}{}%
+\contentsline {subsection}{\numberline {2.4}Redes STN}{5}{}%
+\contentsline {section}{\numberline {3}Implementación}{6}{}%
+\contentsline {section}{\numberline {4}Resultados}{6}{}%
+\contentsline {section}{\numberline {5}Conclusión}{6}{}%
+\contentsline {section}{\numberline {6}Bibliografía}{6}{}%

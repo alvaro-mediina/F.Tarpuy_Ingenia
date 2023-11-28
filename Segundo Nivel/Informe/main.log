@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.7.10)  28 NOV 2023 12:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.7.10)  28 NOV 2023 16:07
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -231,6 +231,15 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layoutvoffset=\dimen165
 \Gm@dimlist=\toks26
 )
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip63
+\enit@outerparindent=\dimen166
+\enit@toks=\toks27
+\enit@inbox=\box54
+\enit@count@id=\count281
+\enitdp@description=\count282
+)
 
 LaTeX Warning: Unused global option(s):
     [13pt].
@@ -241,36 +250,36 @@ LaTeX Info: Redefining \% on input line 8.
  (./tp.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Info: Redefining \. on input line 45.
-LaTeX Info: Redefining \% on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Info: Redefining \. on input line 46.
+LaTeX Info: Redefining \% on input line 46.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count281
-\scratchdimen=\dimen166
-\scratchbox=\box54
-\nofMPsegments=\count282
-\nofMParguments=\count283
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count284
-\MPscratchDim=\dimen167
-\MPnumerator=\count285
-\makeMPintoPDFobject=\count286
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count283
+\scratchdimen=\dimen167
+\scratchbox=\box55
+\nofMPsegments=\count284
+\nofMParguments=\count285
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count286
+\MPscratchDim=\dimen168
+\MPnumerator=\count287
+\makeMPintoPDFobject=\count288
+\everyMPtoPDFconversion=\toks29
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -317,14 +326,14 @@ e
 <./img//2.png, id=1, 392.46625pt x 464.73625pt>
 File: ./img//2.png Graphic file (type png)
 <use ./img//2.png>
-Package pdftex.def Info: ./img//2.png  used on input line 59.
+Package pdftex.def Info: ./img//2.png  used on input line 60.
 (pdftex.def)             Requested size: 84.09712pt x 99.58464pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 79.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 79.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -342,35 +351,79 @@ LaTeX Info: Redefining \% on input line 1.
 \openout2 = `tp.aux'.
 
  (./tp.tex
-<./img//3.png, id=17, 755.82375pt x 488.82625pt>
-File: ./img//3.png Graphic file (type png)
-<use ./img//3.png>
-Package pdftex.def Info: ./img//3.png  used on input line 7.
-(pdftex.def)             Requested size: 307.95221pt x 199.16928pt.
+<./img//3.jpeg, id=17, 1027.84pt x 677.53125pt>
+File: ./img//3.jpeg Graphic file (type jpg)
+<use ./img//3.jpeg>
+Package pdftex.def Info: ./img//3.jpeg  used on input line 7.
+(pdftex.def)             Requested size: 302.14369pt x 199.16928pt.
 
 [2
 
- <./img//3.png>]) [3] (./main.aux
+ <./img//3.jpeg>]
+<./img//4.png, id=21, 783.92876pt x 442.65375pt>
+File: ./img//4.png Graphic file (type png)
+<use ./img//4.png>
+Package pdftex.def Info: ./img//4.png  used on input line 25.
+(pdftex.def)             Requested size: 313.56595pt x 177.05835pt.
+<./img//5.png, id=22, 1260.71pt x 399.4925pt>
+File: ./img//5.png Graphic file (type png)
+<use ./img//5.png>
+Package pdftex.def Info: ./img//5.png  used on input line 42.
+(pdftex.def)             Requested size: 378.21593pt x 119.84866pt.
+ [3
+
+ <./img//4.png>]
+<./img//6.png, id=26, 1196.47pt x 397.485pt>
+File: ./img//6.png Graphic file (type png)
+<use ./img//6.png>
+Package pdftex.def Info: ./img//6.png  used on input line 51.
+(pdftex.def)             Requested size: 418.77078pt x 139.12183pt.
+ [4 <./img//5.png> <./img//6.png>]
+<./img//9.png, id=37, 558.085pt x 223.83624pt>
+File: ./img//9.png Graphic file (type png)
+<use ./img//9.png>
+Package pdftex.def Info: ./img//9.png  used on input line 90.
+(pdftex.def)             Requested size: 279.04182pt x 111.91785pt.
+<./img//10.png, id=38, 630.355pt x 162.6075pt>
+File: ./img//10.png Graphic file (type png)
+<use ./img//10.png>
+Package pdftex.def Info: ./img//10.png  used on input line 101.
+(pdftex.def)             Requested size: 315.17673pt x 81.30354pt.
+<./img//7.png, id=39, 731.73375pt x 245.91875pt>
+File: ./img//7.png Graphic file (type png)
+<use ./img//7.png>
+Package pdftex.def Info: ./img//7.png  used on input line 112.
+(pdftex.def)             Requested size: 365.86598pt x 122.95906pt.
+)
+[5 <./img//9.png> <./img//10.png>] [6 <./img//7.png>] (./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
  (./tp.aux)) ) 
 Here is how much of TeX's memory you used:
- 6017 strings out of 478287
- 93705 string characters out of 5849289
- 498727 words of memory out of 5000000
- 24138 multiletter control sequences out of 15000+600000
- 473985 words of font info for 46 fonts, out of 8000000 for 9000
+ 6460 strings out of 478287
+ 100953 string characters out of 5849289
+ 511239 words of memory out of 5000000
+ 24560 multiletter control sequences out of 15000+600000
+ 478500 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,77p,511b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,12n,77p,638b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
 x10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on main.pdf (4 pages, 1069641 bytes).
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+t10.pfb>
+Output written on main.pdf (7 pages, 1683851 bytes).
 PDF statistics:
- 46 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
