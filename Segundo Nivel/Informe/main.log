@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.9)  27 NOV 2023 00:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.7.10)  28 NOV 2023 12:53
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -8,8 +8,8 @@ LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
 \c@section=\count186
@@ -230,11 +230,15 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layouthoffset=\dimen164
 \Gm@layoutvoffset=\dimen165
 \Gm@dimlist=\toks26
-) (./main.aux
+)
+
+LaTeX Warning: Unused global option(s):
+    [13pt].
+
+(./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
-
-(./tp.aux))
+ (./tp.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
@@ -253,7 +257,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
 LaTeX Font Info:    ... okay on input line 45.
 LaTeX Info: Redefining \. on input line 45.
 LaTeX Info: Redefining \% on input line 45.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count281
 \scratchdimen=\dimen166
@@ -294,12 +299,12 @@ e
 * \topmargin=56.9055pt
 * \headheight=14.0pt
 * \headsep=14.22636pt
-* \topskip=12.0pt
+* \topskip=10.0pt
 * \footskip=14.22636pt
-* \marginparwidth=44.0pt
-* \marginparsep=10.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=-72.26999pt
 * \voffset=-72.26999pt
 * \mag=1000
@@ -333,72 +338,39 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
-
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
-
-
-Package fancyhdr Warning: \footskip is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.57999pt, for example:
-(fancyhdr)                \setlength{\footskip}{14.57999pt}.
-
-[1]
+ [1]
 \openout2 = `tp.aux'.
 
  (./tp.tex
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
-
-
-Package fancyhdr Warning: \footskip is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.57999pt, for example:
-(fancyhdr)                \setlength{\footskip}{14.57999pt}.
+<./img//3.png, id=17, 755.82375pt x 488.82625pt>
+File: ./img//3.png Graphic file (type png)
+<use ./img//3.png>
+Package pdftex.def Info: ./img//3.png  used on input line 7.
+(pdftex.def)             Requested size: 307.95221pt x 199.16928pt.
 
 [2
 
-])
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
-
-
-Package fancyhdr Warning: \footskip is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.57999pt, for example:
-(fancyhdr)                \setlength{\footskip}{14.57999pt}.
-
-[3] (./main.aux
+ <./img//3.png>]) [3] (./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
  (./tp.aux)) ) 
 Here is how much of TeX's memory you used:
- 6019 strings out of 478287
- 93714 string characters out of 5849289
- 498743 words of memory out of 5000000
- 24136 multiletter control sequences out of 15000+600000
- 476931 words of font info for 56 fonts, out of 8000000 for 9000
+ 6017 strings out of 478287
+ 93705 string characters out of 5849289
+ 498727 words of memory out of 5000000
+ 24138 multiletter control sequences out of 15000+600000
+ 473985 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,77p,237b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,12n,77p,511b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
-x12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on main.pdf (4 pages, 174655 bytes).
+x10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on main.pdf (4 pages, 1069641 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 20 compressed objects within 1 object stream
+ 46 PDF objects out of 1000 (max. 8388607)
+ 26 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
