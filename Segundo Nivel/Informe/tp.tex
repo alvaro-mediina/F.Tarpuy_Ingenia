@@ -113,11 +113,110 @@ Las transformaciones espaciales, tales como rotaciones y traslaciones, pueden in
 		\caption{Representación de algunos efectos}
 	\end{figure}
 	
+	\subsection{Etapa de la detección de objetos}
+	En el campo de la detección de objetos, las arquitecturas aplicadas a menudo se estructuran en dos etapas distintas, cada una desempeñando un papel crucial en el proceso global de reconocimiento y localización de objetos en imágenes. Estas etapas son la detección de la región y la detección y clasificación del objeto.
 
+	\begin{enumerate}
+		\item Detección de la Región
+En la primera etapa, la detección de la región se centra en identificar áreas candidatas que podrían contener objetos de interés. Diversas técnicas han sido desarrolladas para esta tarea, entre las cuales se destacan la ventana deslizante y la búsqueda selectiva, entre otras similares. La ventana deslizante implica el escaneo sistemático de la imagen mediante una ventana móvil, evaluando cada región para determinar la probabilidad de contener un objeto. Por otro lado, la búsqueda selectiva utiliza propuestas generadas previamente para enfocarse en áreas más prometedoras de la imagen, reduciendo así la carga computacional.
+
+	\item Detección y Clasificación del Objeto:
+Una vez identificadas las regiones de interés, la siguiente etapa involucra la detección y clasificación del objeto dentro de estas regiones. Aquí, se pueden utilizar clasificadores clásicos o redes neuronales convolucionales entrenadas específicamente para reconocer patrones visuales asociados con categorías de objetos. Este paso es esencial para asignar una etiqueta a cada objeto detectado, proporcionando información sobre su naturaleza y características
 	
+	\end{enumerate}	
 
+	\begin{figure}[ht]
+	    \centering
+		\includegraphics[scale=.47]{11}
+		\caption{Esquema de detectores por etapas}
+	\end{figure}
+	
+	\subsubsection{Arquitecturas Integradas}
+	Aunque las dos etapas mencionadas anteriormente son comunes, han surgido arquitecturas más avanzadas que realizan ambas tareas simultáneamente. Estas arquitecturas integran la detección de la región y la clasificación del objeto en una única red neuronal, permitiendo una inferencia más eficiente y rápida.
+En el panorama de la detección de objetos, la elección entre arquitecturas de una o dos etapas depende de los requisitos específicos de la aplicación y las limitaciones computacionales.
 
+	\begin{figure}[ht]
+	    \centering
+		\includegraphics[scale=.5]{12}
+		\caption{Arquitectura con dos etapas}
+	\end{figure}
+	
+	\subsection{Ventana deslizante}
+	La técnica de ventana deslizante, que implica el desplazamiento de rectángulos a través de una imagen en busca de objetos, se convierte en una estrategia aún más potente cuando se incorporan optimizaciones clave. Este enfoque exhaustivo se beneficia de la flexibilidad para cambiar el tamaño de la imagen o de la propia ventana deslizante, permitiendo la obtención de cajas de delimitaciones más precisas.
+	
+	\begin{figure}[ht]
+  		\centering
+  		\includegraphics[width=0.25\textwidth]{13}
+  		\hspace{0.5cm}
+  		\includegraphics[width=0.25\textwidth]{14}
+  		\caption{Representación de la técnica}
+	\end{figure}
 
+	Cuando se trabaja con imágenes de tamaños variados, ajustar la escala de la ventana deslizante es esencial para garantizar la detección efectiva de objetos en diferentes contextos. Posteriormente, basándose en las ventanas donde se detecta el objeto en imágenes más pequeñas, se puede escalar nuevamente y unir las detecciones. Este proceso contribuye significativamente a obtener resultados más precisos y detallados, especialmente en escenarios donde la escala de los objetos varía considerablemente.
+
+	\begin{figure}[ht]
+	    \centering
+		\includegraphics[scale=.33]{15}
+		\caption{Representación de la técnica}
+	\end{figure}
+
+	La versatilidad de la ventana deslizante también puede conducir a situaciones en las que varias cajas de delimitaciones detectan el mismo objeto. El desafío radica en seleccionar la mejor candidata entre estas detecciones redundantes. Para abordar este problema, se emplea la técnica de \textbf{Non-Maximum Suppression} (supresión de no máximos) entre las candidatas. Esta estrategia se centra en retener únicamente la detección más confiable, descartando las demás para evitar duplicaciones innecesarias.
+	
+	\begin{figure}[ht]
+	    \centering
+		\includegraphics[scale=.45]{16}
+		\caption{Representación de la técnica NMS}
+	\end{figure}
+	
+	La evaluación de la calidad de las detecciones se realiza mediante la métrica Intersection Over Union (Intersección sobre Unión, IoU). Esta métrica calcula la proporción entre la intersección y la unión de dos regiones delimitadas por cajas. Al establecer un umbral específico de IoU, se puede determinar la superposición aceptable entre dos cajas para considerarlas como duplicadas o no. Esto asegura que la mejor candidata seleccionada sea la que mejor se ajusta a la verdadera posición y forma del objeto.
+
+	\begin{figure}[ht]
+	    \centering
+		\includegraphics[scale=.55]{18}
+		\caption{Representación de la técnica NMS}
+	\end{figure}
+	
+	\subsubsection{Otros datos}
+	La técnica de ventana deslizante, a pesar de ser efectiva en la detección de objetos, enfrenta desafíos computacionales significativos, especialmente en términos de eficiencia. Su alto costo computacional se debe a que cada recorte generado por el desplazamiento de la ventana debe procesarse individualmente por la red convolucional, siendo más intensivo en recursos con imágenes de alta resolución o detecciones más precisas.
+
+	La situación empeora al buscar un desplazamiento más preciso, ya que explorar un espacio de búsqueda más fino implica procesar más regiones, aumentando exponencialmente la carga computacional. La ventana deslizante no es óptima para Redes Neuronales Convolucionales (CNN), ya que la complejidad de las CNN hace que el procesamiento independiente de cada recorte sea ineficiente y costoso.
+
+	Para superar estas limitaciones, se propone la ventana deslizante convolucional, que optimiza el proceso al introducir la convolución directamente en la ventana. Esto permite a la red compartir cálculos entre regiones superpuestas, reduciendo redundancias y mejorando la eficiencia global del modelo.
+
+	\subsection{Intersección sobre la Union (IoU)}
+	La métrica de Intersección sobre la Unión (IoU) es como un elemento crucial en la evaluación de la precisión y calidad de las predicciones en la detección de objetos. Esta métrica proporciona una medida del grado de superposición entre dos regiones delimitantes, ofreciendo una indicación clara de la similitud y, por ende, de la efectividad del modelo predictivo.
+	\pagebreak
+	
+	El cálculo de IoU está dado por la siguiente expresión:
+	
+	\begin{equation*}
+    	IoU = \frac{\text{área de la intersección}}{\text{área de la unión}}
+	\end{equation*}
+	
+	Donde el numerador representa el área compartida entre las dos regiones delimitantes, y el denominador representa el área total cubierta por ambas. Este cálculo proporciona un valor normalizado que varía entre 0 y 1, donde 0 indica ninguna superposición y 1 indica una coincidencia perfecta entre las regiones.
+	
+	\vspace{0.3cm}
+	
+	\textbf{La interpretación del resultado de IoU es directa:} 
+	\begin{itemize}
+	\item A medida que el valor de IoU se acerca a 1, se indica una mayor similitud y precisión en la predicción
+	\item Un IoU de 0.5 se considera un umbral comúnmente aceptado para determinar si una predicción es correcta
+	\item Si el IoU es mayor a 0.5, se considera que la predicción es precisa, lo que implica que la región predicha se superpone significativamente con la región real del objeto.
+	
+	\end{itemize}		
+
+	Esta métrica es especialmente valiosa en situaciones donde es esencial evaluar no solo la detección de un objeto, sino también la precisión de su ubicación y forma predicha. Al establecer un umbral significativo, se puede establecer un estándar para la aceptabilidad de las predicciones, contribuyendo así a la toma de decisiones en la optimización de modelos de detección de objetos.
+
+	\begin{figure}[ht]
+	    \centering
+		\includegraphics[scale=.55]{35}
+		\caption{Representación de la métrica IoU}
+	\end{figure}
+
+	\subsection{Non-Max Supression}
+	
+	La técnica de Non-Maximum Suppression (NMS) es una estrategia esencial en la postprocesamiento de detecciones, particularmente cuando se enfrenta a la presencia de múltiples celdas o ventanas que comprenden un solo objeto. El objetivo principal de NMS es seleccionar la ventana que mejor encuadre al objeto en cuestión, eliminando redundancias y asegurando una salida precisa.
+El proceso de Non-Maximum Suppression inicia evaluando las probabilidades asociadas con cada detección (pc) y seleccionando la ventana con la probabilidad más alta. Este paso inicial garantiza que la predicción más confiable se mantenga, sirviendo como referencia para la supresión de detecciones redundantes.
 
 \section{Implementación}
 \section{Resultados}

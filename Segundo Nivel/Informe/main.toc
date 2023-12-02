@@ -7,7 +7,13 @@
 \contentsline {subsection}{\numberline {2.2}Clasificación de la imágen}{3}{}%
 \contentsline {subsection}{\numberline {2.3}Clasificación con Localización}{4}{}%
 \contentsline {subsection}{\numberline {2.4}Redes STN}{5}{}%
-\contentsline {section}{\numberline {3}Implementación}{6}{}%
-\contentsline {section}{\numberline {4}Resultados}{6}{}%
-\contentsline {section}{\numberline {5}Conclusión}{6}{}%
-\contentsline {section}{\numberline {6}Bibliografía}{6}{}%
+\contentsline {subsection}{\numberline {2.5}Etapa de la detección de objetos}{6}{}%
+\contentsline {subsubsection}{\numberline {2.5.1}Arquitecturas Integradas}{7}{}%
+\contentsline {subsection}{\numberline {2.6}Ventana deslizante}{7}{}%
+\contentsline {subsubsection}{\numberline {2.6.1}Otros datos}{8}{}%
+\contentsline {subsection}{\numberline {2.7}Intersección sobre la Union (IoU)}{8}{}%
+\contentsline {subsection}{\numberline {2.8}Non-Max Supression}{9}{}%
+\contentsline {section}{\numberline {3}Implementación}{9}{}%
+\contentsline {section}{\numberline {4}Resultados}{9}{}%
+\contentsline {section}{\numberline {5}Conclusión}{9}{}%
+\contentsline {section}{\numberline {6}Bibliografía}{9}{}%
