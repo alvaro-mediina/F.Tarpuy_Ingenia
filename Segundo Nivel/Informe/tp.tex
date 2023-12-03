@@ -11,7 +11,29 @@ La seguridad vial es una preocupación global de suma importancia, y el tráfico
 El crecimiento exponencial de datos visuales en entornos urbanos y la necesidad de respuestas rápidas ante señales cambiantes hacen imperativa la adopción de enfoques avanzados. Acá es donde las redes neuronales toman importancia, porque su capacidad para aprender patrones complejos a partir de grandes conjuntos de datos permite el desarrollo de modelos capaces de discernir con precisión las señales de tráfico en imágenes, incluso en condiciones adversas.
 En este contexto, la motivación subyacente es impulsar la aplicación de redes neuronales en el ámbito específico de la detección y clasificación de señales de tránsito.
 
-\subsection {Objetivo}
+\subsection {Objetivos}
+	Los objetivos del proyecto son los siguientes:
+	\begin{enumerate}
+		\item \textbf{Pre-procesamiento de los datos:} Se llevará a cabo un pre-proceso en los datasets que tendrán relevancia en el entrenamiento de los distintos modelos.
+		\item \textbf{Implementación de Arquitecturas Neuronales:}
+		\begin{enumerate}
+			\item \textbf{Desarrollo del modelo VGG-16:} Desarrollar la arquitectura de la red neuronal VGG-16 para la obtención de mapas de características, quitando capas para obtener resultados que necesitaremos para la siguiente etapa.
+			\item \textbf{Desarrollo del modelo ROI-Pooling:}
+				\begin{itemize}
+					 \item Diseñar la arquitectura de la red neuronal ROI Pooling para identificar la presencia de señales de tránsito en los mapas de características obtenidos por VGG-16.
+					 \item Entrenar la red ROI Pooling con diversos conjuntos de mapas de características generados a partir de imágenes de tráfico.
+				\end{itemize}
+			\item \textbf{Implementación del modelo de clasificación:}
+				\begin{itemize}
+					\item Investigación y evaluación de diferentes arquitecturas de redes neuronales. Se seleccionará la arquitectura más adecuada para el clasificador de señales de tránsito, teniendo en cuenta la precisión, la eficacia computacional y el tamaño del modelo.
+					\item Entrenar la red de clasificación utilizando un conjunto de datos exclusivo que incluye imágenes de señales de tránsito etiquetadas.
+				\end{itemize}
+		\end{enumerate}
+		\item \textbf{Integración de las redes neuronales:} Integrar las arquitecturas VGG-16, ROI Pooling y la red de clasificación para formar un modelo coherente y funcional de clasificación de señales de tránsito.
+		\item \textbf{Evaluación del rendimiento del modelo:} Evaluar la precisión y eficacia del modelo completo mediante métricas relevantes de clasificación.
+		\item \textbf{Comunicación:} Analizar críticamente los resultados, identificar posibles mejoras y proporcionar recomendaciones para futuras investigaciones.
+	\end{enumerate}
+
 \clearpage
 
 \section{Marco Teórico}
@@ -214,9 +236,88 @@ En el panorama de la detección de objetos, la elección entre arquitecturas de 
 	\end{figure}
 
 	\subsection{Non-Max Supression}
+
+	\begin{wrapfigure}[16]{R}{.42\textwidth} 
+		\centering
+		\includegraphics[scale=.50]{19}
+		\caption{Referencia a la técnica NMS}
+	\end{wrapfigure}
 	
 	La técnica de Non-Maximum Suppression (NMS) es una estrategia esencial en la postprocesamiento de detecciones, particularmente cuando se enfrenta a la presencia de múltiples celdas o ventanas que comprenden un solo objeto. El objetivo principal de NMS es seleccionar la ventana que mejor encuadre al objeto en cuestión, eliminando redundancias y asegurando una salida precisa.
 El proceso de Non-Maximum Suppression inicia evaluando las probabilidades asociadas con cada detección (pc) y seleccionando la ventana con la probabilidad más alta. Este paso inicial garantiza que la predicción más confiable se mantenga, sirviendo como referencia para la supresión de detecciones redundantes.
+	
+	A continuación, se examinan los rectángulos \textbf{cercanos} al rectángulo con la mayor probabilidad:
+	
+	Se calcula el valor de solapamiento (IoU) entre estos rectángulos y el rectángulo de mayor probabilidad. Aquellos rectángulos que tienen un valor de IoU significativo con el rectángulo de referencia son suprimidos, ya que representan detecciones superpuestas o redundantes. Este proceso, además de supresión, garantiza que solo se retenga la detección más confiable y precisa, eliminando aquellas que no aportan información adicional significativa. La técnica de Non-Maximum Suppression, por lo tanto, contribuye a la generación de resultados más limpios y coherentes en el contexto de la detección de objetos.
+Es importante destacar que, en escenarios donde hay varios objetos a detectar, NMS puede ejecutarse de manera independiente para cada salida, permitiendo así un manejo eficiente de múltiples detecciones en una única imagen, y así asegurando que la selección de ventanas se realice de manera óptima para cada objeto individual.
+	
+	\begin{figure}[ht]
+	    \centering
+		\includegraphics[scale=.60]{20}
+		\caption{Representación de NMS+IoU}
+	\end{figure}
+
+	\subsection{Mapa de densidad}
+
+	\begin{wrapfigure}[17]{R}{.43\textwidth} 
+		\centering
+		\includegraphics[scale=.47]{21}
+		\caption{Ejemplo de un mapa de densidad}
+	\end{wrapfigure}
+	
+	Otra estrategia que se utiliza ampliamente es la de los mapas de densidad. La metodología de mapas de densidad comienza con la creación de una matriz de ceros del mismo tamaño que la imagen original. Por cada ventana cuyo puntaje (score) supere un umbral predeterminado, se incrementa en uno la cantidad en las posiciones que la ventana abarca en la matriz. Este enfoque tiene el propósito de construir un mapa que refleje la densidad de detecciones en diferentes regiones de la imagen.
+	
+	Posteriormente, el proceso implica recortar las zonas de la matriz cuyos valores superan un umbral específico. Este paso refina la información, destacando las regiones con una densidad significativa de detecciones y descartando áreas con puntuaciones inferiores.
+	
+	La utilización de mapas de densidad aporta varios beneficios al proceso de detección de objetos. Al construir una representación más rica de la distribución espacial de los objetos detectados, esta técnica puede ser especialmente valiosa en situaciones donde se busca comprender la concentración y la disposición precisa de los elementos de interés.
+	
+	Es importante tener en cuenta que la elección de los umbrales juega un papel crucial en la efectividad de los mapas de densidad. Ajustar adecuadamente estos umbrales permite adaptar la técnica a las características específicas de la aplicación y optimizar la detección de objetos en diferentes contextos.
+	
+	\subsection{Ventana deslizante convolucional}
+	
+	La Ventana Deslizante Convolucional es una evolución de la técnica original de ventana deslizante en el ámbito de la detección de objetos. Esta adaptación introduce la convolución directamente en el proceso de exploración de la imagen, superando las limitaciones computacionales asociadas con la versión clásica.
+	\pagebreak
+	\begin{figure}[ht]
+	    \centering
+		\includegraphics[scale=.45]{22}
+		\caption{Ejemplo de funcionamiento}
+	\end{figure}
+	
+	En la implementación convolucional de la ventana deslizante, se aprovecha la capacidad de las redes neuronales convolucionales (CNN) para realizar operaciones de convolución de manera eficiente. En lugar de procesar cada recorte de la imagen de manera independiente, la red convolucional comparte cálculos entre regiones superpuestas, reduciendo así la redundancia y optimizando el costo computacional asociado con la técnica de ventana deslizante tradicional.
+	
+	El proceso se inicia con la generación de múltiples niveles de representaciones a través de capas convolucionales. Estas representaciones capturan gradualmente características de diferentes niveles de abstracción en la imagen. Luego, se desliza una ventana convolucional a través de estas representaciones, permitiendo que la red focalice su atención en regiones específicas y aprenda patrones jerárquicos de manera eficaz.
+	\begin{figure}[ht]
+	    \centering
+		\includegraphics[scale=.45]{23}
+		\caption{Proceso}
+	\end{figure}
+	
+	La Ventana Deslizante Convolucional aborda la desventaja computacional de la ventana deslizante clásica al mejorar la eficiencia y la capacidad de aprendizaje de la red. Al utilizar capas convolucionales, se logra una mayor capacidad de generalización, lo que permite al modelo detectar objetos en diferentes escalas, orientaciones y contextos visuales.
+	
+	\begin{figure}[ht]
+	    \centering
+		\includegraphics[scale=.60]{24}
+		\caption{Representación de la técnica}
+	\end{figure}
+	
+	Además, esta técnica contribuye a la generación de mapas de características que resaltan áreas relevantes de la imagen. Estos mapas, combinados con capas de clasificación y regresión, permiten la detección precisa y la asignación de categorías a los objetos identificados.
+
+	\subsection{Predicción del cuadro delimitador}
+	
+	\begin{wrapfigure}[19]{R}{.43\textwidth} 
+		\centering
+		\includegraphics[scale=.59]{25}
+		\caption{Ejemplo de predicción}
+	\end{wrapfigure}
+	
+	A pesar de la optimización que proporciona la implementación de la técnica de ventana deslizante en conjunto con redes neuronales convolucionales (CNN), surge una limitación crucial en la precisión de los cuadros delimitadores asociados a los objetos detectados.
+
+	Esta limitación se manifiesta en situaciones donde ninguna ventana deslizante coincide de manera precisa con la posición real del objeto, como un vehículo. Además, la forma y tamaño predeterminados de la ventana deslizante pueden no ser los más apropiados para delimitar con precisión la región de interés.
+	
+	La falta de precisión en los límites del cuadro delimitador puede comprometer la exactitud global del sistema de detección de objetos. Esto se convierte en un desafío importante, ya que la correcta delimitación de la región ocupada por el objeto es esencial para comprender su ubicación y forma con precisión.
+	Para abordar esta limitación, se exploran enfoques avanzados que buscan mejorar la predicción de los cuadros delimitadores, permitiendo una detección más precisa y detallada de los objetos en la imagen. Estos enfoques a menudo involucran técnicas de regresión que buscan ajustar dinámicamente los límites del cuadro en función de las características específicas del objeto detectado.
+
+	
 
 \section{Implementación}
 \section{Resultados}

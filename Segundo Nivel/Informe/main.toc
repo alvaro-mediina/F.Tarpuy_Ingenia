@@ -1,19 +1,22 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {section}{\numberline {1}Introducción}{2}{}%
 \contentsline {subsection}{\numberline {1.1}Motivación}{2}{}%
-\contentsline {subsection}{\numberline {1.2}Objetivo}{2}{}%
-\contentsline {section}{\numberline {2}Marco Teórico}{3}{}%
-\contentsline {subsection}{\numberline {2.1}Detección de Objetos}{3}{}%
-\contentsline {subsection}{\numberline {2.2}Clasificación de la imágen}{3}{}%
-\contentsline {subsection}{\numberline {2.3}Clasificación con Localización}{4}{}%
-\contentsline {subsection}{\numberline {2.4}Redes STN}{5}{}%
-\contentsline {subsection}{\numberline {2.5}Etapa de la detección de objetos}{6}{}%
-\contentsline {subsubsection}{\numberline {2.5.1}Arquitecturas Integradas}{7}{}%
-\contentsline {subsection}{\numberline {2.6}Ventana deslizante}{7}{}%
-\contentsline {subsubsection}{\numberline {2.6.1}Otros datos}{8}{}%
-\contentsline {subsection}{\numberline {2.7}Intersección sobre la Union (IoU)}{8}{}%
-\contentsline {subsection}{\numberline {2.8}Non-Max Supression}{9}{}%
-\contentsline {section}{\numberline {3}Implementación}{9}{}%
-\contentsline {section}{\numberline {4}Resultados}{9}{}%
-\contentsline {section}{\numberline {5}Conclusión}{9}{}%
-\contentsline {section}{\numberline {6}Bibliografía}{9}{}%
+\contentsline {subsection}{\numberline {1.2}Objetivos}{2}{}%
+\contentsline {section}{\numberline {2}Marco Teórico}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Detección de Objetos}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Clasificación de la imágen}{4}{}%
+\contentsline {subsection}{\numberline {2.3}Clasificación con Localización}{5}{}%
+\contentsline {subsection}{\numberline {2.4}Redes STN}{6}{}%
+\contentsline {subsection}{\numberline {2.5}Etapa de la detección de objetos}{7}{}%
+\contentsline {subsubsection}{\numberline {2.5.1}Arquitecturas Integradas}{8}{}%
+\contentsline {subsection}{\numberline {2.6}Ventana deslizante}{8}{}%
+\contentsline {subsubsection}{\numberline {2.6.1}Otros datos}{9}{}%
+\contentsline {subsection}{\numberline {2.7}Intersección sobre la Union (IoU)}{9}{}%
+\contentsline {subsection}{\numberline {2.8}Non-Max Supression}{10}{}%
+\contentsline {subsection}{\numberline {2.9}Mapa de densidad}{11}{}%
+\contentsline {subsection}{\numberline {2.10}Ventana deslizante convolucional}{11}{}%
+\contentsline {subsection}{\numberline {2.11}Predicción del cuadro delimitador}{13}{}%
+\contentsline {section}{\numberline {3}Implementación}{13}{}%
+\contentsline {section}{\numberline {4}Resultados}{13}{}%
+\contentsline {section}{\numberline {5}Conclusión}{13}{}%
+\contentsline {section}{\numberline {6}Bibliografía}{13}{}%
