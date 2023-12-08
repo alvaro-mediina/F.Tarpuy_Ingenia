@@ -16,7 +16,8 @@
 \contentsline {subsection}{\numberline {2.9}Mapa de densidad}{11}{}%
 \contentsline {subsection}{\numberline {2.10}Ventana deslizante convolucional}{11}{}%
 \contentsline {subsection}{\numberline {2.11}Predicción del cuadro delimitador}{13}{}%
-\contentsline {section}{\numberline {3}Implementación}{13}{}%
-\contentsline {section}{\numberline {4}Resultados}{13}{}%
-\contentsline {section}{\numberline {5}Conclusión}{13}{}%
-\contentsline {section}{\numberline {6}Bibliografía}{13}{}%
+\contentsline {subsection}{\numberline {2.12}Arquitectura R-CNN}{13}{}%
+\contentsline {section}{\numberline {3}Implementación}{14}{}%
+\contentsline {section}{\numberline {4}Resultados}{14}{}%
+\contentsline {section}{\numberline {5}Conclusión}{14}{}%
+\contentsline {section}{\numberline {6}Bibliografía}{14}{}%
