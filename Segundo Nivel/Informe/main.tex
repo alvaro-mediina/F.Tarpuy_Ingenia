@@ -16,6 +16,15 @@
 \usepackage{enumitem}
 \usepackage{wrapfig}
 \usepackage{subcaption}
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+=======
+>>>>>>> f459089f33bdc0e55a343d2f3c3ad66991bd5aa4
+>>>>>>> Stashed changes
 
 %--Configuración de la página--%
 \setpapersize{A4}
@@ -77,7 +86,7 @@
 	\begin{minipage}{0.8\textwidth}
 		\begin{center} \large
 			Tutor: Leandro Borgnino \\[0.5cm]
-			Integrantes: Medina Santiago, Esteban Suarez y Alfonso Mouton
+			Integrantes: Santiago Medina, Esteban Suarez y Alfonso Mouton
 		\end{center}
 	\end{minipage}
 
@@ -92,5 +101,15 @@
 %----------------------------------------------------------------------------------------
 	\include{tp}
 
-
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY SECTION
+%----------------------------------------------------------------------------------------
+    \clearpage
+ 	
+	\renewcommand{\refname}{Bibliografía}
+	\bibliography{ref}
+	\renewcommand*{\UrlFont}{\scriptsize}
+	\bibliographystyle{ieeetr}
+    
+    
 \end{document}
