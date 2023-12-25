@@ -1,5 +1,4 @@
 \babel@toc {spanish}{}\relax 
-<<<<<<< HEAD
 \contentsline {section}{\numberline {1}Introducción}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Motivación}{2}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Objetivos}{2}{subsection.1.2}%
@@ -28,38 +27,3 @@
 \contentsline {subsection}{\numberline {4.4}Arquitectura del modelo total}{18}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Plataforma de implementación}{18}{subsection.4.5}%
 \contentsline {section}{\numberline {5}Conclusión}{19}{section.5}%
-=======
-\contentsline {section}{\numberline {1}Introducción}{2}{}%
-\contentsline {subsection}{\numberline {1.1}Motivación}{2}{}%
-\contentsline {subsection}{\numberline {1.2}Objetivos}{2}{}%
-\contentsline {section}{\numberline {2}Marco Teórico}{4}{}%
-\contentsline {subsection}{\numberline {2.1}Detección de Objetos}{4}{}%
-\contentsline {subsection}{\numberline {2.2}Clasificación de la imágen}{4}{}%
-\contentsline {subsection}{\numberline {2.3}Clasificación con Localización}{5}{}%
-\contentsline {subsection}{\numberline {2.4}Redes STN}{6}{}%
-\contentsline {subsection}{\numberline {2.5}Etapa de la detección de objetos}{7}{}%
-\contentsline {subsubsection}{\numberline {2.5.1}Arquitecturas Integradas}{8}{}%
-\contentsline {subsection}{\numberline {2.6}Ventana deslizante}{8}{}%
-\contentsline {subsubsection}{\numberline {2.6.1}Otros datos}{9}{}%
-\contentsline {subsection}{\numberline {2.7}Intersección sobre la Union (IoU)}{9}{}%
-\contentsline {subsection}{\numberline {2.8}Non-Max Supression}{10}{}%
-\contentsline {subsection}{\numberline {2.9}Mapa de densidad}{11}{}%
-\contentsline {subsection}{\numberline {2.10}Ventana deslizante convolucional}{11}{}%
-\contentsline {subsection}{\numberline {2.11}Predicción del cuadro delimitador}{13}{}%
-\contentsline {subsection}{\numberline {2.12}R-CNN}{13}{}%
-\contentsline {subsection}{\numberline {2.13}Fast R-CNN}{13}{}%
-\contentsline {subsection}{\numberline {2.14}Faster R-CNN}{14}{}%
-\contentsline {subsection}{\numberline {2.15}YOLO(You Only Look Once)}{14}{}%
-\contentsline {subsubsection}{\numberline {2.15.1}Algoritmo}{14}{}%
-\contentsline {subsubsection}{\numberline {2.15.2}Arquitectura}{15}{}%
-\contentsline {subsubsection}{\numberline {2.15.3}Entrenamiento - Función Pérdida}{16}{}%
-\contentsline {subsubsection}{\numberline {2.15.4}Ventajas}{17}{}%
-\contentsline {subsubsection}{\numberline {2.15.5}Desventajas}{18}{}%
-\contentsline {section}{\numberline {3}Implementación}{18}{}%
-\contentsline {section}{\numberline {4}Resultados}{18}{}%
-\contentsline {section}{\numberline {5}Conclusión}{18}{}%
-\contentsline {section}{\numberline {6}Bibliografía}{18}{}%
-<<<<<<< Updated upstream
-=======
->>>>>>> f459089f33bdc0e55a343d2f3c3ad66991bd5aa4
->>>>>>> Stashed changes
